@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B2F7B2146CE0D00E40D3C /* AppDelegate.swift */; };
-		E04B2F7E2146CE0D00E40D3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B2F7D2146CE0D00E40D3C /* ViewController.swift */; };
 		E04B2F812146CE0D00E40D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F7F2146CE0D00E40D3C /* Main.storyboard */; };
 		E04B2F832146CE0E00E40D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F822146CE0E00E40D3C /* Assets.xcassets */; };
 		E04B2F862146CE0E00E40D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F842146CE0E00E40D3C /* LaunchScreen.storyboard */; };
+		E04B2F912146CF1B00E40D3C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B2F902146CF1B00E40D3C /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E04B2F782146CE0D00E40D3C /* Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04B2F7B2146CE0D00E40D3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E04B2F7D2146CE0D00E40D3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E04B2F802146CE0D00E40D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E04B2F822146CE0E00E40D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E04B2F852146CE0E00E40D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04B2F872146CE0E00E40D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04B2F8E2146CF1A00E40D3C /* Meet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meet-Bridging-Header.h"; sourceTree = "<group>"; };
+		E04B2F8F2146CF1B00E40D3C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		E04B2F902146CF1B00E40D3C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,48 @@
 		E04B2F7A2146CE0D00E40D3C /* Meet */ = {
 			isa = PBXGroup;
 			children = (
+				E04B2F942146CF7A00E40D3C /* View */,
+				E04B2F932146CF6F00E40D3C /* Model */,
+				E04B2F922146CF6700E40D3C /* Controller */,
+				E04B2F8D2146CE9700E40D3C /* Supporting Files */,
 				E04B2F7B2146CE0D00E40D3C /* AppDelegate.swift */,
-				E04B2F7D2146CE0D00E40D3C /* ViewController.swift */,
 				E04B2F7F2146CE0D00E40D3C /* Main.storyboard */,
 				E04B2F822146CE0E00E40D3C /* Assets.xcassets */,
 				E04B2F842146CE0E00E40D3C /* LaunchScreen.storyboard */,
 				E04B2F872146CE0E00E40D3C /* Info.plist */,
 			);
 			path = Meet;
+			sourceTree = "<group>";
+		};
+		E04B2F8D2146CE9700E40D3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E04B2F8F2146CF1B00E40D3C /* SWRevealViewController.h */,
+				E04B2F902146CF1B00E40D3C /* SWRevealViewController.m */,
+				E04B2F8E2146CF1A00E40D3C /* Meet-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E04B2F922146CF6700E40D3C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E04B2F932146CF6F00E40D3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E04B2F942146CF7A00E40D3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +132,7 @@
 				TargetAttributes = {
 					E04B2F772146CE0D00E40D3C = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -135,8 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04B2F7E2146CE0D00E40D3C /* ViewController.swift in Sources */,
 				E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */,
+				E04B2F912146CF1B00E40D3C /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLMQ56W2VQ;
 				INFOPLIST_FILE = Meet/Info.plist;
@@ -289,6 +327,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.r8.Meet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meet/Supporting Files/Meet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLMQ56W2VQ;
 				INFOPLIST_FILE = Meet/Info.plist;
@@ -307,6 +348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.r8.Meet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meet/Supporting Files/Meet-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
