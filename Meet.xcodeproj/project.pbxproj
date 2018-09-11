@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01C273221477239006D149C /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C273121477239006D149C /* ChannelVC.swift */; };
+		E01C273521477265006D149C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C273421477265006D149C /* ChatVC.swift */; };
 		E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B2F7B2146CE0D00E40D3C /* AppDelegate.swift */; };
 		E04B2F812146CE0D00E40D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F7F2146CE0D00E40D3C /* Main.storyboard */; };
 		E04B2F832146CE0E00E40D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F822146CE0E00E40D3C /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 		115B61468270576261B1F11F /* Pods_Meet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5108775B4D694084DBC995 /* Pods-Meet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet/Pods-Meet.release.xcconfig"; sourceTree = "<group>"; };
 		DA9980763B4FDD00E58E5969 /* Pods-Meet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meet/Pods-Meet.debug.xcconfig"; sourceTree = "<group>"; };
+		E01C273121477239006D149C /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		E01C273421477265006D149C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		E04B2F782146CE0D00E40D3C /* Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04B2F7B2146CE0D00E40D3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E04B2F802146CE0D00E40D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,10 +75,10 @@
 		E04B2F7A2146CE0D00E40D3C /* Meet */ = {
 			isa = PBXGroup;
 			children = (
+				E04B2F8D2146CE9700E40D3C /* Supporting Files */,
 				E04B2F942146CF7A00E40D3C /* View */,
 				E04B2F932146CF6F00E40D3C /* Model */,
 				E04B2F922146CF6700E40D3C /* Controller */,
-				E04B2F8D2146CE9700E40D3C /* Supporting Files */,
 				E04B2F7B2146CE0D00E40D3C /* AppDelegate.swift */,
 				E04B2F7F2146CE0D00E40D3C /* Main.storyboard */,
 				E04B2F822146CE0E00E40D3C /* Assets.xcassets */,
@@ -97,6 +101,8 @@
 		E04B2F922146CF6700E40D3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E01C273121477239006D149C /* ChannelVC.swift */,
+				E01C273421477265006D149C /* ChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01C273521477265006D149C /* ChatVC.swift in Sources */,
 				E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */,
+				E01C273221477239006D149C /* ChannelVC.swift in Sources */,
 				E04B2F912146CF1B00E40D3C /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
