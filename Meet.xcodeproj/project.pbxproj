@@ -18,6 +18,8 @@
 		E04B2F832146CE0E00E40D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F822146CE0E00E40D3C /* Assets.xcassets */; };
 		E04B2F862146CE0E00E40D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F842146CE0E00E40D3C /* LaunchScreen.storyboard */; };
 		E04B2F912146CF1B00E40D3C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B2F902146CF1B00E40D3C /* SWRevealViewController.m */; };
+		E0D2563F2148130A00379037 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2563E2148130A00379037 /* AuthService.swift */; };
+		E0D2564321481AC600379037 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2564221481AC600379037 /* RoundedButton.swift */; };
 		F4D3A7E37E105DBE475D526C /* Pods_Meet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B61468270576261B1F11F /* Pods_Meet.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		E04B2F8E2146CF1A00E40D3C /* Meet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meet-Bridging-Header.h"; sourceTree = "<group>"; };
 		E04B2F8F2146CF1B00E40D3C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		E04B2F902146CF1B00E40D3C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		E0D2563E2148130A00379037 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E0D2564221481AC600379037 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		E04B2F7A2146CE0D00E40D3C /* Meet */ = {
 			isa = PBXGroup;
 			children = (
+				E0D2563D2148129A00379037 /* Services */,
 				E01C273821477ED4006D149C /* Utilities */,
 				E04B2F8D2146CE9700E40D3C /* Supporting Files */,
 				E04B2F942146CF7A00E40D3C /* View */,
@@ -137,8 +142,17 @@
 			isa = PBXGroup;
 			children = (
 				E01C2736214779E0006D149C /* GradientView.swift */,
+				E0D2564221481AC600379037 /* RoundedButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E0D2563D2148129A00379037 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E0D2563E2148130A00379037 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F9C2560DC2F8F251AAE96212 /* Pods */ = {
@@ -278,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01C273521477265006D149C /* ChatVC.swift in Sources */,
+				E0D2564321481AC600379037 /* RoundedButton.swift in Sources */,
 				E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */,
 				E01C273E214787A2006D149C /* CreateAccountVC.swift in Sources */,
+				E0D2563F2148130A00379037 /* AuthService.swift in Sources */,
 				E01C273C214783AC006D149C /* LoginVC.swift in Sources */,
 				E01C2737214779E0006D149C /* GradientView.swift in Sources */,
 				E01C273221477239006D149C /* ChannelVC.swift in Sources */,
