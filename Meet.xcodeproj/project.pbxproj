@@ -20,6 +20,7 @@
 		E04B2F912146CF1B00E40D3C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04B2F902146CF1B00E40D3C /* SWRevealViewController.m */; };
 		E0D2563F2148130A00379037 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2563E2148130A00379037 /* AuthService.swift */; };
 		E0D2564321481AC600379037 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2564221481AC600379037 /* RoundedButton.swift */; };
+		E0D2564521482BF100379037 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2564421482BF100379037 /* UserDataService.swift */; };
 		F4D3A7E37E105DBE475D526C /* Pods_Meet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B61468270576261B1F11F /* Pods_Meet.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		E04B2F902146CF1B00E40D3C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E0D2563E2148130A00379037 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E0D2564221481AC600379037 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E0D2564421482BF100379037 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				E0D2563E2148130A00379037 /* AuthService.swift */,
+				E0D2564421482BF100379037 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				E01C2737214779E0006D149C /* GradientView.swift in Sources */,
 				E01C273221477239006D149C /* ChannelVC.swift in Sources */,
 				E04B2F912146CF1B00E40D3C /* SWRevealViewController.m in Sources */,
+				E0D2564521482BF100379037 /* UserDataService.swift in Sources */,
 				E01C273A21477EFB006D149C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
