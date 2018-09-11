@@ -23,6 +23,7 @@
 		E0D2564521482BF100379037 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2564421482BF100379037 /* UserDataService.swift */; };
 		E0D25647214834B000379037 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D25646214834B000379037 /* AvatarPickerVC.swift */; };
 		E0D256492148388A00379037 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D256482148388A00379037 /* AvatarCell.swift */; };
+		E0D2564B21484BAA00379037 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2564A21484BAA00379037 /* CircleImage.swift */; };
 		F4D3A7E37E105DBE475D526C /* Pods_Meet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B61468270576261B1F11F /* Pods_Meet.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		E0D2564421482BF100379037 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		E0D25646214834B000379037 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		E0D256482148388A00379037 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		E0D2564A21484BAA00379037 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				E01C2736214779E0006D149C /* GradientView.swift */,
 				E0D2564221481AC600379037 /* RoundedButton.swift */,
 				E0D256482148388A00379037 /* AvatarCell.swift */,
+				E0D2564A21484BAA00379037 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				E01C273521477265006D149C /* ChatVC.swift in Sources */,
 				E0D25647214834B000379037 /* AvatarPickerVC.swift in Sources */,
 				E0D2564321481AC600379037 /* RoundedButton.swift in Sources */,
+				E0D2564B21484BAA00379037 /* CircleImage.swift in Sources */,
 				E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */,
 				E01C273E214787A2006D149C /* CreateAccountVC.swift in Sources */,
 				E0D2563F2148130A00379037 /* AuthService.swift in Sources */,

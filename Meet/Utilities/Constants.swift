@@ -16,12 +16,11 @@ let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 
-//segues
+// segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccout"
 let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvaterPicker"
-//let AVATAR_CELL = "avatarCell"
 
 // User Defaults
 let TOKEN_KEY = "token"
@@ -32,3 +31,7 @@ let USER_EMAIL = "userEmail"
 let HEADER = [
     "Content-Type": "application/json; charset=utf-8"
 ]
+
+// colors
+let purpalePlaceHolder = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 0.5)
+
