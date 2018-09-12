@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="profileVC" customModule="Meet" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="8sf-kw-WVo" id="9Gb-VS-Q4a"/>
+                <outlet property="profileImg" destination="7eN-xk-th2" id="uIA-pg-LES"/>
+                <outlet property="userEmail" destination="MVo-kJ-4mr" id="43y-DI-SbO"/>
+                <outlet property="username" destination="gDO-jo-ixB" id="eXw-9P-rQN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sf-kw-WVo" userLabel="backgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKu-nb-VqL">
+                    <rect key="frame" x="30" y="158.5" width="315" height="350"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msj-vg-dGM">
+                            <rect key="frame" x="279" y="8" width="28" height="28"/>
+                            <state key="normal" image="closeButton"/>
+                            <connections>
+                                <action selector="closebtn:" destination="-1" eventType="touchUpInside" id="40c-6g-NFt"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eEh-Fq-FXx">
+                            <rect key="frame" x="77" y="50" width="161" height="210"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecn-Qs-3XG">
+                                    <rect key="frame" x="18.5" y="0.0" width="124" height="27.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="7eN-xk-th2" customClass="CircleImage" customModule="Meet" customModuleProvider="target">
+                                    <rect key="frame" x="30.5" y="42.5" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="Iwx-sx-BAC"/>
+                                        <constraint firstAttribute="height" constant="100" id="s3q-Qo-xui"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mehedi Right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDO-jo-ixB">
+                                    <rect key="frame" x="28" y="157.5" width="105.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mehedi.right@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVo-kJ-4mr">
+                                    <rect key="frame" x="0.0" y="193" width="161" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-O3-emc" customClass="RoundedButton" customModule="Meet" customModuleProvider="target">
+                            <rect key="frame" x="125.5" y="307" width="64" height="35"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="11"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="logoutBtnPressed:" destination="-1" eventType="touchUpInside" id="qEm-VP-GBb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="eEh-Fq-FXx" firstAttribute="centerX" secondItem="tKu-nb-VqL" secondAttribute="centerX" id="Ec9-fI-x4Y"/>
+                        <constraint firstAttribute="height" constant="350" id="KoP-g7-UJg"/>
+                        <constraint firstItem="eEh-Fq-FXx" firstAttribute="centerY" secondItem="tKu-nb-VqL" secondAttribute="centerY" constant="-20" id="KoS-l2-IGK"/>
+                        <constraint firstAttribute="trailing" secondItem="Msj-vg-dGM" secondAttribute="trailing" constant="8" id="NdM-um-2Nv"/>
+                        <constraint firstAttribute="bottom" secondItem="WXA-O3-emc" secondAttribute="bottom" constant="8" id="VoC-aH-spu"/>
+                        <constraint firstItem="WXA-O3-emc" firstAttribute="centerX" secondItem="tKu-nb-VqL" secondAttribute="centerX" id="Zt8-Ep-dbH"/>
+                        <constraint firstItem="Msj-vg-dGM" firstAttribute="top" secondItem="tKu-nb-VqL" secondAttribute="top" constant="8" id="w7d-TO-J2A"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                            <color key="value" red="0.31603002079999998" green="0.67843137249999996" blue="0.1577560241" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tKu-nb-VqL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Vho-5q-OcD"/>
+                <constraint firstItem="tKu-nb-VqL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="flq-Xe-wdj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tKu-nb-VqL" secondAttribute="trailing" constant="30" id="pQR-xf-X4n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+        <image name="profileDefault" width="192" height="192"/>
+    </resources>
+</document>

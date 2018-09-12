@@ -37,7 +37,7 @@ let purpalePlaceHolder = #colorLiteral(red: 0.2196078449, green: 0.007843137719,
 
 // notification
 
-let NOTIFICATION_USER_DATA_CHANGE = Notification.Name( "NotificUserDataChange")
+let NOTIFICATION_USER_DATA_CHANGE = Notification.Name( "NotifiUserDataChange")
 
 
 
