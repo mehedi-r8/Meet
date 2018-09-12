@@ -17,5 +17,11 @@ class ChatVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
         
+        
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUserByEmail(completion: {(success) in
+                NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_CHANGE, object: nil)
+            })
+        }
     }
 }
