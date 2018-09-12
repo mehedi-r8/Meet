@@ -14,6 +14,7 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passtxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     // Variables
     var avatarName = "profileDefault"
@@ -57,13 +58,23 @@ class CreateAccountVC: UIViewController {
     }
     
     func setupView() {
+        spinner.isHidden = true
         usernameTxt.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor: purpalePlaceHolder])
         emailTxt.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: purpalePlaceHolder])
         passtxt.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: purpalePlaceHolder])
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     
     @IBAction func createAccountBtnPressed(_ sender: Any) {
+        spinner.isHidden = false
+        spinner.startAnimating()
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
         guard let email = emailTxt.text , emailTxt.text != "" else { return }
         guard let pass = passtxt.text , passtxt.text != "" else { return }
@@ -76,8 +87,11 @@ class CreateAccountVC: UIViewController {
                         print("😍😍Awesome \(email) login Done😍😍")
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
+                                self.spinner.isHidden = true
+                                self.spinner.stopAnimating()
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_CHANGE, object: nil)
                                 print("😍😍Awesome create user Done😍😍")
-                                
                             } else{
                                 print("☹️ create user error")
                             }

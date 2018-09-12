@@ -35,3 +35,10 @@ let HEADER = [
 // colors
 let purpalePlaceHolder = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 0.5)
 
+// notification
+
+let NOTIFICATION_USER_DATA_CHANGE = Notification.Name( "NotificUserDataChange")
+
+
+
+
