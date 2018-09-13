@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="bgView" destination="8sf-kw-WVo" id="9Gb-VS-Q4a"/>
                 <outlet property="profileImg" destination="7eN-xk-th2" id="uIA-pg-LES"/>
+                <outlet property="profileView" destination="tKu-nb-VqL" id="4oX-sL-d4Y"/>
                 <outlet property="userEmail" destination="MVo-kJ-4mr" id="43y-DI-SbO"/>
                 <outlet property="username" destination="gDO-jo-ixB" id="eXw-9P-rQN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

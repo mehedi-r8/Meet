@@ -14,6 +14,7 @@ class profileVC: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var profileView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class profileVC: UIViewController {
         profileImg.backgroundColor = UserDataService.instance.returnUIColor(componets: UserDataService.instance.avatarColor)
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(profileVC.closeTap(_:)))
         bgView.addGestureRecognizer(closeTouch)
+        profileView.layer.cornerRadius = 15
         
     }
     

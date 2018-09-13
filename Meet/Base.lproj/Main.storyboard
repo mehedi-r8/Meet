@@ -51,6 +51,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVi-Kd-mdK">
                                 <rect key="frame" x="317" y="68.333333333333329" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addchannelBtnPressed:" destination="AAC-c2-5Qw" eventType="touchUpInside" id="iyw-jx-mWQ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="7sw-6I-lcK" customClass="CircleImage" customModule="Meet" customModuleProvider="target">
                                 <rect key="frame" x="20" y="646" width="70" height="70"/>
