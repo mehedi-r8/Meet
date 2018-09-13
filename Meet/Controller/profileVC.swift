@@ -14,6 +14,7 @@ class profileVC: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var bgView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

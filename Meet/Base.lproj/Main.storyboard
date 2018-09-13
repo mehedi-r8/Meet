@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVi-Kd-mdK">
-                                <rect key="frame" x="317" y="68" width="22" height="22"/>
+                                <rect key="frame" x="317" y="68.333333333333329" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="7sw-6I-lcK" customClass="CircleImage" customModule="Meet" customModuleProvider="target">
@@ -61,9 +61,33 @@
                                     <constraint firstAttribute="width" constant="70" id="oQC-ga-gh6"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="naU-Rm-obR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="naU-Rm-obR">
                                 <rect key="frame" x="0.0" y="110.66666666666669" width="414" height="533.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" rowHeight="49" id="FvG-3u-iTz" customClass="ChannelCell" customModule="Meet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="49"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FvG-3u-iTz" id="Vmy-Xx-tJe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#General" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vth-sH-3nA">
+                                                    <rect key="frame" x="20" y="14.000000000000057" width="130" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="channelName" destination="vth-sH-3nA" id="n6c-9Z-Pem"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pd-Yz-Yi3">
                                 <rect key="frame" x="174" y="664" width="120" height="34"/>
@@ -100,13 +124,14 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="9pd-Yz-Yi3" id="yFT-dX-Hcg"/>
+                        <outlet property="tableView" destination="naU-Rm-obR" id="512-LO-qSL"/>
                         <outlet property="userImg" destination="7sw-6I-lcK" id="QbM-zT-Mzy"/>
                         <segue destination="82P-7o-lCh" kind="show" identifier="toLogin" id="7nu-u5-DfC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuU-Bc-Yh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="-384"/>
+            <point key="canvasLocation" x="1533" y="-385"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="pml-Rw-MrQ">
@@ -237,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gx-4n-iQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280" y="-202"/>
+            <point key="canvasLocation" x="2284" y="-386"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="V6o-HA-w3d">
@@ -363,7 +388,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lod-Oq-eCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BXc-bs-44j" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3031.884057971015" y="-202.17391304347828"/>
+            <point key="canvasLocation" x="3043" y="-386"/>
         </scene>
         <!--Avatar PickerVC-->
         <scene sceneID="OQC-eK-wCc">
@@ -453,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhw-Uu-GoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3744.9275362318845" y="-206.25000000000003"/>
+            <point key="canvasLocation" x="3741" y="-386"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="5Qs-oB-S3n">
@@ -505,7 +530,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHn-0e-oZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="461"/>
+            <point key="canvasLocation" x="1533" y="380"/>
         </scene>
     </scenes>
     <resources>

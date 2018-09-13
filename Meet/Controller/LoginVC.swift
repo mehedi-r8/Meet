@@ -30,7 +30,6 @@ class LoginVC: UIViewController {
             return
         }
         
-        
         AuthService.instance.loginUser(email: username, password: password) { (success) in
             if success {
                 AuthService.instance.findUserByEmail(completion: { (success) in
@@ -49,7 +48,6 @@ class LoginVC: UIViewController {
                 self.spinner.stopAnimating()
             }
         }
-    
     }
     @IBAction func closeBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)

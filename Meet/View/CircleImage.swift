@@ -23,5 +23,4 @@ class CircleImage: UIImageView {
     override func prepareForInterfaceBuilder() {
         setupView()
     }
-
 }
