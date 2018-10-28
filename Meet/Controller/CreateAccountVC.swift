@@ -28,10 +28,9 @@ class CreateAccountVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if  UserDataService.instance.avatarName != "" {
+        if UserDataService.instance.avatarName != "" {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             avatarName = UserDataService.instance.avatarName
-            
             if avatarName.contains("light") && bgColor == nil {
                 userImg.backgroundColor = UIColor.lightGray
             }
@@ -60,9 +59,9 @@ class CreateAccountVC: UIViewController {
     
     func setupView() {
         spinner.isHidden = true
-        usernameTxt.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor: purpalePlaceHolder])
-        emailTxt.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: purpalePlaceHolder])
-        passtxt.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: purpalePlaceHolder])
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor: purplePlaceholder])
+        emailTxt.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: purplePlaceholder])
+        passtxt.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: purplePlaceholder])
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
         view.addGestureRecognizer(tap)
@@ -76,33 +75,25 @@ class CreateAccountVC: UIViewController {
     @IBAction func createAccountBtnPressed(_ sender: Any) {
         spinner.isHidden = false
         spinner.startAnimating()
+        
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
         guard let email = emailTxt.text , emailTxt.text != "" else { return }
         guard let pass = passtxt.text , passtxt.text != "" else { return }
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                print("😍😍Awesome Registration Done😍😍")
                 AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
                     if success {
-                        print("😍😍Awesome \(email) login Done😍😍")
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
                                 self.spinner.isHidden = true
                                 self.spinner.stopAnimating()
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
-                                NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_CHANGE, object: nil)
-                                print("😍😍Awesome create user Done😍😍")
-                            } else{
-                                print("☹️ create user error")
+                                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                             }
                         })
-                    } else {
-                        print("☹️login error")
                     }
                 })
-            } else {
-                print("😢😢cannot create user😢😢")
             }
         }
     }

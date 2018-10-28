@@ -13,15 +13,14 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
+    // Variables
     var avatarType = AvatarType.dark
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
@@ -39,15 +38,11 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 28
     }
     
-    @IBAction func backBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func segmentControlChange(_ sender: Any) {
+    @IBAction func segmentControlChanged(_ sender: Any) {
         if segmentControl.selectedSegmentIndex == 0 {
-            avatarType = AvatarType.dark
+            avatarType = .dark
         } else {
-            avatarType = AvatarType.light
+            avatarType = .light
         }
         collectionView.reloadData()
     }
@@ -72,5 +67,9 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
         }
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

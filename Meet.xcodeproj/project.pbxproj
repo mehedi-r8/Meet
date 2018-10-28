@@ -13,8 +13,8 @@
 		E01C273A21477EFB006D149C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C273921477EFB006D149C /* Constants.swift */; };
 		E01C273C214783AC006D149C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C273B214783AC006D149C /* LoginVC.swift */; };
 		E01C273E214787A2006D149C /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C273D214787A2006D149C /* CreateAccountVC.swift */; };
-		E01E3843214A1C0700451DBF /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01E3842214A1C0700451DBF /* MessageService.swift */; };
 		E01E3845214A1C8900451DBF /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01E3844214A1C8900451DBF /* Channel.swift */; };
+		E02FDAB921862BF2000AFE97 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01E3842214A1C0700451DBF /* MessageService.swift */; };
 		E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B2F7B2146CE0D00E40D3C /* AppDelegate.swift */; };
 		E04B2F812146CE0D00E40D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F7F2146CE0D00E40D3C /* Main.storyboard */; };
 		E04B2F832146CE0E00E40D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04B2F822146CE0E00E40D3C /* Assets.xcassets */; };
@@ -31,6 +31,7 @@
 		E0D91C6D214AA88100617262 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D91C6C214AA88100617262 /* ChannelCell.swift */; };
 		E0D91C70214AB4AC00617262 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D91C6E214AB4AC00617262 /* AddChannelVC.swift */; };
 		E0D91C71214AB4AC00617262 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D91C6F214AB4AC00617262 /* AddChannelVC.xib */; };
+		E0D91C73214AC6AD00617262 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D91C72214AC6AD00617262 /* SocketService.swift */; };
 		F4D3A7E37E105DBE475D526C /* Pods_Meet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B61468270576261B1F11F /* Pods_Meet.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		E0D91C6C214AA88100617262 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		E0D91C6E214AB4AC00617262 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		E0D91C6F214AB4AC00617262 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		E0D91C72214AC6AD00617262 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +148,8 @@
 		E04B2F922146CF6700E40D3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E01C273121477239006D149C /* ChannelVC.swift */,
 				E01C273421477265006D149C /* ChatVC.swift */,
+				E01C273121477239006D149C /* ChannelVC.swift */,
 				E01C273B214783AC006D149C /* LoginVC.swift */,
 				E01C273D214787A2006D149C /* CreateAccountVC.swift */,
 				E0D25646214834B000379037 /* AvatarPickerVC.swift */,
@@ -192,6 +194,7 @@
 				E0D2563E2148130A00379037 /* AuthService.swift */,
 				E0D2564421482BF100379037 /* UserDataService.swift */,
 				E01E3842214A1C0700451DBF /* MessageService.swift */,
+				E0D91C72214AC6AD00617262 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -334,14 +337,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D91C73214AC6AD00617262 /* SocketService.swift in Sources */,
 				E01C273521477265006D149C /* ChatVC.swift in Sources */,
 				E0D91C6D214AA88100617262 /* ChannelCell.swift in Sources */,
 				E0D25647214834B000379037 /* AvatarPickerVC.swift in Sources */,
 				E0D2564321481AC600379037 /* RoundedButton.swift in Sources */,
+				E02FDAB921862BF2000AFE97 /* MessageService.swift in Sources */,
 				E0D2564B21484BAA00379037 /* CircleImage.swift in Sources */,
 				E01E3845214A1C8900451DBF /* Channel.swift in Sources */,
 				E0BFB14A2148FAF2005930E3 /* profileVC.swift in Sources */,
-				E01E3843214A1C0700451DBF /* MessageService.swift in Sources */,
 				E04B2F7C2146CE0D00E40D3C /* AppDelegate.swift in Sources */,
 				E01C273E214787A2006D149C /* CreateAccountVC.swift in Sources */,
 				E0D2563F2148130A00379037 /* AuthService.swift in Sources */,
@@ -501,7 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLMQ56W2VQ;
 				INFOPLIST_FILE = Meet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,7 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLMQ56W2VQ;
 				INFOPLIST_FILE = Meet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

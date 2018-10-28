@@ -24,12 +24,28 @@ class AddChannelVC: UIViewController {
     }
     
     @IBAction func createChannelBtnPressed(_ sender: Any) {
-        
+        guard let channelName = nameTxt.text , nameTxt.text != "" else {
+            return
+        }
+        guard let channelDescription = ChannelDescription.text, ChannelDescription.text != "" else {
+            return
+        }
+        SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDescription) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+                print("addddddddddddddddddddddd")
+            } else {
+                print("\n\nerror\n\n")
+            }
+        }
     }
+    
     func setupView() {
-        let closeTouch = UITapGestureRecognizer(target: self, action: #selector(profileVC.closeTap(_:)))
+        let closeTouch = UITapGestureRecognizer(target: self, action: #selector(AddChannelVC.closeTap(_:)))
         bgView.addGestureRecognizer(closeTouch)
-        addChannelView.layer.cornerRadius = 20
+        
+        nameTxt.attributedPlaceholder = NSAttributedString(string: "name", attributes: [NSAttributedString.Key.foregroundColor : purplePlaceholder])
+        ChannelDescription.attributedPlaceholder = NSAttributedString(string: "description", attributes: [NSAttributedString.Key.foregroundColor : purplePlaceholder])
     }
     
     @objc func closeTap(_ recognizer: UITapGestureRecognizer) {

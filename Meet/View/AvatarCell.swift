@@ -18,7 +18,7 @@ class AvatarCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.setUpView()
+        setUpView()
     }
     
     func configureCell(index: Int, type: AvatarType) {

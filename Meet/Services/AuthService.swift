@@ -27,7 +27,7 @@ class AuthService {
     
     var authToken: String {
         get {
-            return defaults.value(forKey: TOKEN_KEY) as! String
+            return UserDefaults.standard.value(forKey: TOKEN_KEY) as! String
         }
         set {
             defaults.set(newValue, forKey: TOKEN_KEY)
@@ -56,12 +56,9 @@ class AuthService {
             
             if response.result.error == nil {
                 completion(true)
-                print("❤️❤️working 💚 Alamofire register❤️❤️ ")
             } else {
                 completion(false)
-                print("💔💔not working Alamofire register💔💔")
                 debugPrint(response.result.error as Any)
-                
             }
         }
     }
@@ -81,14 +78,13 @@ class AuthService {
                 guard let data = response.data else { return }
                 let json = try! JSON(data: data)
                 self.userEmail = json["user"].stringValue
-                self.authToken = json["token"].stringValue
-                
+                let lol = json["token"].stringValue
+                self.authToken = lol
+                print(self.authToken)
                 self.isLoggedIn = true
                 completion(true)
-                print("❤️❤️working 💚 Alamofire login❤️❤️ ")
             } else {
                 completion(false)
-                print("💔💔not working Alamofire login💔💔")
                 debugPrint(response.result.error as Any)
             }
         }
@@ -111,27 +107,26 @@ class AuthService {
                 guard let data = response.data else { return }
                 self.setUserInfo(data: data)
                 completion(true)
-                print("❤️❤️working 💚 Alamofire create user❤️❤️ ")
+                
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
-                print("💔💔not working Alamofire create user💔💔")
             }
         }
     }
     
     func findUserByEmail(completion: @escaping CompletionHandler) {
+        
         Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
             if response.result.error == nil {
                 guard let data = response.data else { return }
                 self.setUserInfo(data: data)
-                
                 completion(true)
-                print("❤️❤️working 💚 Alamofire find email❤️❤️ ")
+                
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
-                print("💔💔not working Alamofire find email💔💔")
             }
         }
     }

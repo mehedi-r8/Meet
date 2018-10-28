@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,7 +79,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -260,7 +259,7 @@
                         <outlet property="passwordTxt" destination="cky-Vp-hyq" id="4Xf-1r-zSM"/>
                         <outlet property="spinner" destination="PP4-MF-Qzh" id="A2w-Ve-rK8"/>
                         <outlet property="usernameTxt" destination="4TC-Gh-by6" id="q44-AG-Fab"/>
-                        <segue destination="gPm-kQ-fBF" kind="show" identifier="toCreateAccout" id="bjB-bK-5ge"/>
+                        <segue destination="gPm-kQ-fBF" kind="show" identifier="toCreateAccount" id="bjB-bK-5ge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gx-4n-iQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,7 +384,7 @@
                         <outlet property="userImg" destination="zxz-bl-Jks" id="Rmq-vl-IOh"/>
                         <outlet property="usernameTxt" destination="T6R-QF-qUa" id="smT-wN-jbw"/>
                         <segue destination="BXc-bs-44j" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="I3M-cG-Zfd"/>
-                        <segue destination="Bg2-o9-wHy" kind="show" identifier="toAvaterPicker" id="vlP-E2-Ty1"/>
+                        <segue destination="Bg2-o9-wHy" kind="show" identifier="toAvatarPicker" id="vlP-E2-Ty1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lod-Oq-eCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -528,6 +527,7 @@
                         <viewLayoutGuide key="safeArea" id="qH3-Wr-nrc"/>
                     </view>
                     <connections>
+                        <outlet property="channnelnameLbl" destination="0gX-h1-qjf" id="i52-Ed-Evi"/>
                         <outlet property="menuBtn" destination="IrQ-wR-Drh" id="lGX-2P-QIW"/>
                     </connections>
                 </viewController>

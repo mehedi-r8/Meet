@@ -30,11 +30,10 @@ class profileVC: UIViewController {
         username.text = UserDataService.instance.name
         userEmail.text = UserDataService.instance.email
         profileImg.image = UIImage(named: UserDataService.instance.avatarName)
-        profileImg.backgroundColor = UserDataService.instance.returnUIColor(componets: UserDataService.instance.avatarColor)
+        profileImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+        
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(profileVC.closeTap(_:)))
         bgView.addGestureRecognizer(closeTouch)
-        profileView.layer.cornerRadius = 15
-        
     }
     
     @objc func closeTap(_ recognizer: UITapGestureRecognizer) {
@@ -43,7 +42,7 @@ class profileVC: UIViewController {
     
     @IBAction func logoutBtnPressed(_ sender: Any) {
         UserDataService.instance.logoutUser()
-        NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_CHANGE, object: nil)
+        NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         dismiss(animated: true, completion: nil)
     }
 }

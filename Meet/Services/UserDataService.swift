@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class UserDataService {
     
     static let instance = UserDataService()
@@ -29,13 +30,13 @@ class UserDataService {
         self.avatarName = avatarName
     }
     
-    func returnUIColor(componets: String) -> UIColor {
-        let scanner = Scanner(string: componets)
-        let skipped = CharacterSet(charactersIn:"[], ")
+    func returnUIColor(components: String) -> UIColor {
+        let scanner = Scanner(string: components)
+        let skipped = CharacterSet(charactersIn: "[], ")
         let comma = CharacterSet(charactersIn: ",")
         scanner.charactersToBeSkipped = skipped
         
-        var r, g, b, a: NSString?
+        var r, g, b, a : NSString?
         
         scanner.scanUpToCharacters(from: comma, into: &r)
         scanner.scanUpToCharacters(from: comma, into: &g)
@@ -44,23 +45,15 @@ class UserDataService {
         
         let defaultColor = UIColor.lightGray
         
-        guard let rUnwarapped = r else {
-            return defaultColor
-        }
-        guard let gUnwarapped = g else {
-            return defaultColor
-        }
-        guard let bUnwarapped = b else {
-            return defaultColor
-        }
-        guard let aUnwarapped = a else {
-            return defaultColor
-        }
+        guard let rUnwrapped = r else { return defaultColor }
+        guard let gUnwrapped = g else { return defaultColor }
+        guard let bUnwrapped = b else { return defaultColor }
+        guard let aUnwrapped = a else { return defaultColor }
         
-        let rfloat = CGFloat(rUnwarapped.doubleValue)
-        let gfloat = CGFloat(gUnwarapped.doubleValue)
-        let bfloat = CGFloat(bUnwarapped.doubleValue)
-        let afloat = CGFloat(aUnwarapped.doubleValue)
+        let rfloat = CGFloat(rUnwrapped.doubleValue)
+        let gfloat = CGFloat(gUnwrapped.doubleValue)
+        let bfloat = CGFloat(bUnwrapped.doubleValue)
+        let afloat = CGFloat(aUnwrapped.doubleValue)
         
         let newUIColor = UIColor(red: rfloat, green: gfloat, blue: bfloat, alpha: afloat)
         
@@ -72,10 +65,12 @@ class UserDataService {
         avatarName = ""
         avatarColor = ""
         email = ""
+        name = ""
         AuthService.instance.isLoggedIn = false
         AuthService.instance.userEmail = ""
-        AuthService.instance.authToken = ""
+        AuthService.instance.authToken = nil!
+        MessageService.instance.clearChannels()
+        
+        
     }
-    
-    
 }
