@@ -1,5 +1,5 @@
 //
-//  profileVC.swift
+//  ProfileVC.swift
 //  Meet
 //
 //  Created by MEHEDI.R8 on 9/12/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class profileVC: UIViewController {
+class ProfileVC: UIViewController {
 
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var username: UILabel!
@@ -32,7 +32,7 @@ class profileVC: UIViewController {
         profileImg.image = UIImage(named: UserDataService.instance.avatarName)
         profileImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
         
-        let closeTouch = UITapGestureRecognizer(target: self, action: #selector(profileVC.closeTap(_:)))
+        let closeTouch = UITapGestureRecognizer(target: self, action: #selector(ProfileVC.closeTap(_:)))
         bgView.addGestureRecognizer(closeTouch)
     }
     

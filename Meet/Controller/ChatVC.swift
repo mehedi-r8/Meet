@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SocketIO
 
 class ChatVC: UIViewController {
 
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channnelnameLbl: UILabel!
+    @IBOutlet weak var MessageTextBox: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.KeyboardBind()
+        hideKeyboard()
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -29,6 +33,18 @@ class ChatVC: UIViewController {
             })
         }
     }
+    
+    
+    func hideKeyboard() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Handle Keyboard
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
     
     @objc func userDataDidChange(_ notif: Notification) {
         if AuthService.instance.isLoggedIn {
@@ -69,6 +85,11 @@ class ChatVC: UIViewController {
         MessageService.instance.findAllMessageForChannel(channelId: channelId) { (success) in
             
         }
+    }
+    
+    
+    
+    @IBAction func sendBtn(_ sender: Any) {
         
     }
 }
